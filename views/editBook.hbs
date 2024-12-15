@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Book</title>
+  <style>
+    /* Add your CSS for styling the form here */
+  </style>
+</head>
+<body>
+  <h1>Edit Book</h1>
+
+  <form action="/admin/books/edit/{{book.BookID}}" method="POST">
+    <label for="title">Title:</label><br>
+    <input type="text" id="title" name="title" value="{{book.Title}}" required><br><br>
+
+    <label for="authorId">Author:</label><br>
+    <input type="number" id="authorId" name="authorId" value="{{book.AuthorID}}" required><br><br>
+
+    <label for="price">Price:</label><br>
+    <input type="number" id="price" name="price" value="{{book.Price}}" required><br><br>
+
+    <label for="publishedYear">Published Year:</label><br>
+    <input type="number" id="publishedYear" name="publishedYear" value="{{book.PublishedYear}}" required><br><br>
+
+    <button type="submit">Save Changes</button>
+  </form>
+</body>
+</html>

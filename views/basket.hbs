@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Shopping Basket</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+      color: #333;
+    }
+    table {
+      width: 80%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    th, td {
+      padding: 10px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    .button-container {
+      text-align: center;
+      margin-top: 20px;
+      display: flex;
+      gap: 20px;
+      flex-direction: column;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 0 10px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:disabled {
+      background-color: grey;
+      cursor: not-allowed;
+    }
+    .button-container a {
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Your Shopping Basket</h1>
+  
+  {{#if basket.length}}
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Price</th>
+      <th>Quantity</th>
+    </tr>
+    {{#each basket}}
+    <tr>
+      <td>{{this.Title}}</td>
+      <td>{{this.AuthorName}}</td>
+      <td>$ {{this.Price}}</td>
+      <td>{{this.Quantity}}</td>
+      <td>
+        <form action="/basket/remove" method="POST">
+          <input type="hidden" name="BookID" value="{{this.BookID}}">
+          <button type="submit">Remove</button>
+        </form>
+      </td>
+    </tr>
+    {{/each}}
+  </table>
+  {{else}}
+    <p>Your basket is empty.</p>
+  {{/if}}
+
+  <div class="button-container">
+    <a href="javascript:history.back()">
+      <button>Continue Shopping</button>
+    </a>
+
+    {{#if basket.length}}
+      <form action="/purchase" method="GET">
+        <button type="submit">Go to Purchase</button>
+      </form>
+    {{else}}
+      <button disabled>Go to Purchase</button>
+    {{/if}}
+  </div>
+</body>
+</html>

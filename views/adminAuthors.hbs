@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Authors</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    .btn {
+      background-color: #28a745;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .btn-danger {
+      background-color: #dc3545;
+    }
+  </style>
+</head>
+<body>
+  <h1>Authors Management</h1>
+  <a href="/admin/authors/add" class="btn">Add New Author</a>
+
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Bio</th>
+      <th>Actions</th>
+    </tr>
+    {{#each authors}}
+      <tr>
+        <td>{{this.Name}}</td>
+        <td>{{this.Bio}}</td>
+        <td>
+          <a href="/admin/authors/edit/{{this.AuthorID}}" class="btn">Edit</a>
+          <form action="/admin/authors/delete/{{this.AuthorID}}" method="POST" style="display:inline;">
+            <button type="submit" class="btn btn-danger">Delete</button>
+          </form>
+        </td>
+      </tr>
+    {{/each}}
+  </table>
+</body>
+</html>

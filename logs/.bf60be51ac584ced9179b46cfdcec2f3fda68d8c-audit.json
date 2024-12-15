@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "C:\\Users\\addmin\\Desktop\\bookstore\\logs\\.bf60be51ac584ced9179b46cfdcec2f3fda68d8c-audit.json",
+    "files": [
+        {
+            "date": 1734269228144,
+            "name": "C:\\Users\\addmin\\Desktop\\bookstore\\logs\\requests-2024-12-15.log",
+            "hash": "c35c472f64ef6326c5e82b1ab43e5c6431e8ca5ef94793c191d33feeeee0e3a5"
+        }
+    ],
+    "hashType": "sha256"
+}

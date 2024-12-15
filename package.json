@@ -1,0 +1,32 @@
+{
+  "name": "bookstore",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node index.js -e js,hbs,css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "connect-livereload": "^0.6.1",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "hbs": "^4.1.2",
+    "livereload": "^0.9.3",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.3.3",
+    "winston": "^3.17.0",
+    "winston-daily-rotate-file": "^5.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.2",
+    "@babel/node": "^7.22.19",
+    "@babel/preset-env": "^7.23.2",
+    "nodemon": "^2.0.22"
+  }
+}

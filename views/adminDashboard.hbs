@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    /* Navigation Bar */
+    nav {
+      background-color: #007bff;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 20px;
+      font-size: 18px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Main Content */
+    .container {
+      padding: 20px;
+    }
+
+    .container h1 {
+      text-align: center;
+      color: #333;
+      font-size: 28px;
+    }
+
+    .container p {
+      text-align: center;
+      color: #555;
+      font-size: 18px;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      margin: 20px;
+      padding: 10px 20px;
+      background-color: #28a745;
+      color: white;
+      font-size: 16px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .btn:hover {
+      background-color: #218838;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 600px) {
+      nav a {
+        font-size: 14px;
+        margin: 0 10px;
+      }
+
+      .container h1 {
+        font-size: 24px;
+      }
+
+      .container p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/admin/dashboard">Dashboard</a>
+    <a href="/admin/books">Books</a>
+    <a href="/admin/authors">Authors</a>
+    <a href="/admin/awards">Awards</a>
+    <a href="/admin/warehouse">Warehouse</a>
+    <a href="/admin/inventory">Inventory</a>
+    <a href="/admin/contains">Contains</a>
+    <a href="/admin/logout">Logout</a>
+  </nav>
+
+  <div class="container">
+    <h1>Welcome to the Admin Dashboard</h1>
+    <p>Manage Books, Authors, Awards, Warehouse, Inventory, and Contains here.</p>
+
+    <div style="text-align: center;">
+      <a href="/admin/books/add" class="btn">Add New Book</a>
+      <a href="/admin/authors/add" class="btn">Add New Author</a>
+      <a href="/admin/awards/add" class="btn">Add New Award</a>
+    </div>
+  </div>
+</body>
+</html>

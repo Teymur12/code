@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirm Reservation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+      color: #333;
+    }
+    table {
+      width: 80%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    th, td {
+      padding: 10px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background-color: #28a745;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    .confirmation-btn-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 0 10px;
+      border: none;
+      background-color: #28a745;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+  <h1>Confirm Your Reservation</h1>
+
+  {{#if basket.length}}
+    <table>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Price</th>
+        <th>Quantity</th>
+      </tr>
+      {{#each basket}}
+      <tr>
+        <td>{{this.Title}}</td>
+        <td>{{this.AuthorName}}</td>
+        <td>$ {{this.Price}}</td>
+        <td>{{this.Quantity}}</td>
+      </tr>
+      {{/each}}
+    </table>
+  {{else}}
+    <p>Your basket is empty.</p>
+  {{/if}}
+
+  <div class="confirmation-btn-container">
+    <form action="/reservation/confirm" method="POST">
+      <button type="submit">Confirm Reservation</button>
+    </form>
+  </div>
+</body>
+</html>

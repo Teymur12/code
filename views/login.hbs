@@ -1,0 +1,142 @@
+<style>
+  /* General Styles */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #0062E6, #33AEFF); /* Gradient Background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  /* Container (Login Form Card) */
+  div {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+  }
+
+  /* Form Styles */
+  #loginform {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .loginform-input {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* Input Fields */
+  .loginform-input_id,
+  .loginform-input_pwd {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .label-text {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 6px;
+  }
+
+  .loginform-input_id_input,
+  .loginform-input_pwd_input {
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #f7f7f7;
+    transition: border-color 0.3s, background-color 0.3s;
+  }
+
+  /* Input Focus Effect */
+  .loginform-input_id_input:focus,
+  .loginform-input_pwd_input:focus {
+    outline: none;
+    border-color: #0062E6;  /* Blue border on focus */
+    background-color: #fff;
+  }
+
+  .loginform-input_forget {
+    font-size: 12px;
+    color: #33AEFF;
+    cursor: pointer;
+    text-align: right;
+    padding: 0 5px;
+  }
+
+  /* Button Container */
+  .loginform-btnDiv {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Submit Button */
+  .loginform-btnDiv_btn {
+    padding: 15px 25px;
+    background-color: #33AEFF;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+  }
+
+  /* Button Hover Effect */
+  .loginform-btnDiv_btn:hover {
+    background-color: #0062E6;
+  }
+
+  /* Responsive Design for Mobile */
+  @media (max-width: 480px) {
+    div {
+      padding: 25px;
+    }
+    
+    .loginform-btnDiv_btn {
+      font-size: 16px;
+    }
+  }
+</style>
+
+
+<div>
+    <form id="loginform" method="post" action="/">
+      <div class="loginform-input">
+        <div class="loginform-input_id">
+          <label for="id" class="label-text">Name</label>
+          <input
+            class="loingform-input_id_input"
+            name="name"
+            type="text"
+            required
+          />
+        </div>
+        <div style="margin-top:8px;" class="loginform-input_pwd">
+          <label for="password" class="label-text">Password</label>
+          <input
+            class="loginform-input_pwd_input"
+            name="password"
+            type="password"
+            required
+          />
+        </div>
+        <div style="margin-top:8px">
+          <span class="loginform-input_forget">Find ID/Password</span>
+        </div>
+      </div>
+      <div class="loginform-btnDiv">
+        <button class="loginform-btnDiv_btn" type="submit">Login</button>
+      </div>
+    </form>
+</div>

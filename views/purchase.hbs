@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Purchase Items</title>
+  <style>
+    /* Existing styles */
+  </style>
+</head>
+<body>
+  <h1>Confirm Your Purchase</h1>
+
+  {{#if basket.length}}
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Total Price</th>
+    </tr>
+    {{#each basket}}
+    <tr>
+      <td>{{this.Title}}</td>
+      <td>{{this.AuthorName}}</td>
+      <td>$ {{this.Price}}</td>
+      <td>{{this.Quantity}}</td>
+      <td>$ {{this.TotalPrice}}</td> <!-- Display Total Price -->
+    </tr>
+    {{/each}}
+  </table>
+
+  <div class="button-container">
+    <form action="/purchase/confirm" method="POST">
+      <button type="submit">Complete Purchase</button>
+    </form>
+  </div>
+  {{else}}
+    <p>Your basket is empty.</p>
+  {{/if}}
+</body>
+</html>

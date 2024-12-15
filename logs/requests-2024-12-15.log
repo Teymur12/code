@@ -1,0 +1,57 @@
+2024-12-15T13:27:08.147Z [info]: Server is running at http://localhost:8001
+2024-12-15T13:27:09.361Z [info]: GET /admin/login
+2024-12-15T13:32:20.127Z [info]: POST /admin/login
+2024-12-15T13:32:20.186Z [info]: GET /admin/dashboard
+2024-12-15T13:33:12.550Z [info]: Server is running at http://localhost:8001
+2024-12-15T13:33:13.362Z [info]: GET /admin/dashboard
+2024-12-15T13:33:20.938Z [info]: GET /admin/authors/add
+2024-12-15T13:33:31.250Z [info]: GET /admin/authors
+2024-12-15T13:34:02.855Z [info]: GET /admin/add
+2024-12-15T13:34:02.858Z [error]: Error: Failed to lookup view "addAuthor" in views directory "C:\Users\addmin\Desktop\bookstore\views"
+2024-12-15T13:34:13.275Z [info]: Server is running at http://localhost:8001
+2024-12-15T13:35:17.864Z [info]: Server is running at http://localhost:8001
+2024-12-15T13:35:18.493Z [info]: GET /admin/add
+2024-12-15T13:35:18.660Z [info]: GET /admin/add
+2024-12-15T13:35:45.421Z [info]: Server is running at http://localhost:8001
+2024-12-15T13:35:45.921Z [info]: GET /admin/add
+2024-12-15T13:35:45.951Z [error]: Error: Failed to lookup view "" in views directory "C:\Users\addmin\Desktop\bookstore\views"
+2024-12-15T13:35:51.981Z [info]: GET /admin
+2024-12-15T13:37:41.630Z [info]: Server is running at http://localhost:8001
+2024-12-15T13:37:42.377Z [info]: GET /admin
+2024-12-15T13:37:44.031Z [info]: Server is running at http://localhost:8001
+2024-12-15T13:37:45.374Z [info]: GET /admin
+2024-12-15T13:37:49.976Z [info]: Server is running at http://localhost:8001
+2024-12-15T13:37:51.372Z [info]: GET /admin
+2024-12-15T13:37:52.452Z [info]: Server is running at http://localhost:8001
+2024-12-15T13:37:53.369Z [info]: GET /admin
+2024-12-15T13:38:08.037Z [info]: Server is running at http://localhost:8001
+2024-12-15T13:38:09.381Z [info]: GET /admin
+2024-12-15T13:38:10.307Z [info]: Server is running at http://localhost:8001
+2024-12-15T13:38:11.359Z [info]: GET /admin
+2024-12-15T13:38:19.403Z [info]: GET /admin/authors/add
+2024-12-15T13:39:04.956Z [info]: Server is running at http://localhost:8001
+2024-12-15T13:39:06.346Z [info]: Server is running at http://localhost:8001
+2024-12-15T13:39:12.850Z [info]: Server is running at http://localhost:8001
+2024-12-15T13:39:17.664Z [info]: Server is running at http://localhost:8001
+2024-12-15T13:39:53.841Z [info]: Server is running at http://localhost:8001
+2024-12-15T13:39:56.942Z [info]: Server is running at http://localhost:8001
+2024-12-15T13:39:58.266Z [info]: GET /admin/authors/add
+2024-12-15T13:39:59.185Z [info]: GET /admin/authors/add
+2024-12-15T13:40:35.722Z [info]: Server is running at http://localhost:8001
+2024-12-15T13:40:44.342Z [info]: Server is running at http://localhost:8001
+2024-12-15T13:40:48.093Z [info]: Server is running at http://localhost:8001
+2024-12-15T13:40:58.922Z [info]: Server is running at http://localhost:8001
+2024-12-15T13:41:00.196Z [info]: GET /admin/authors/add
+2024-12-15T13:41:00.368Z [info]: GET /admin/authors/add
+2024-12-15T13:41:17.655Z [info]: POST /admin/authors/add
+2024-12-15T13:43:20.019Z [info]: POST /admin/authors/add
+2024-12-15T13:43:22.069Z [info]: GET /admin/authors/add
+2024-12-15T13:45:11.975Z [info]: Server is running at http://localhost:8001
+2024-12-15T13:45:13.376Z [info]: GET /admin/authors/add
+2024-12-15T13:45:26.295Z [info]: POST /admin/authors/add
+2024-12-15T13:45:58.648Z [info]: Server is running at http://localhost:8001
+2024-12-15T13:46:01.012Z [info]: Server is running at http://localhost:8001
+2024-12-15T13:46:01.177Z [info]: GET /admin/authors/add
+2024-12-15T13:46:03.805Z [info]: GET /admin/authors/add
+2024-12-15T13:46:22.776Z [info]: POST /admin/authors/add
+2024-12-15T13:46:22.823Z [info]: GET /admin
